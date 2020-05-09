@@ -1,0 +1,58 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="BE9FCEFA-0ADA-087E-3989-FF983617CD45" name="TIPO_ACTIVIDAD">
+<createdBy>USUARIO</createdBy>
+<createdTime>2020-05-08 16:24:10 UTC</createdTime>
+<ownerDesignName>reto</ownerDesignName>
+<engineerTo>
+<item key="A090F99F-8DDE-5A31-A382-68C7F0915EC6" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_TIPO_ACTIVIDAD" id="F8C09961-91C6-84A3-32AA-9D9EF02E8197">
+<createdBy>USUARIO</createdBy>
+<createdTime>2020-05-08 16:24:21 UTC</createdTime>
+<ownerDesignName>reto</ownerDesignName>
+<engineerTo>
+<item key="A090F99F-8DDE-5A31-A382-68C7F0915EC6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="NOMBRE_ACTIVIDAD" id="EF11AF98-4BFA-AF12-AB82-171DF3D64386">
+<createdBy>USUARIO</createdBy>
+<createdTime>2020-05-08 16:24:41 UTC</createdTime>
+<ownerDesignName>reto</ownerDesignName>
+<engineerTo>
+<item key="A090F99F-8DDE-5A31-A382-68C7F0915EC6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>21</dataTypeSize>
+<ownDataTypeParameters>21,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="C556EEB5-7743-CB09-4C48-9B1054BB13D3" name="TIPO_ACTIVIDAD PK">
+<createdBy>USUARIO</createdBy>
+<createdTime>2020-05-08 16:24:37 UTC</createdTime>
+<ownerDesignName>reto</ownerDesignName>
+<engineerTo>
+<item key="A090F99F-8DDE-5A31-A382-68C7F0915EC6" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>F8C09961-91C6-84A3-32AA-9D9EF02E8197</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

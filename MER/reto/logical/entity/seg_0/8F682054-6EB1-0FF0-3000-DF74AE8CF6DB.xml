@@ -1,0 +1,82 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="8F682054-6EB1-0FF0-3000-DF74AE8CF6DB" name="JUNTAS">
+<createdBy>USUARIO</createdBy>
+<createdTime>2020-05-08 15:23:45 UTC</createdTime>
+<ownerDesignName>reto</ownerDesignName>
+<engineerTo>
+<item key="A090F99F-8DDE-5A31-A382-68C7F0915EC6" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_JUNTA" id="7B85F825-A895-B233-EBA8-9B69ABE214F5">
+<createdBy>USUARIO</createdBy>
+<createdTime>2020-05-08 17:48:59 UTC</createdTime>
+<ownerDesignName>reto</ownerDesignName>
+<engineerTo>
+<item key="A090F99F-8DDE-5A31-A382-68C7F0915EC6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="FECHA_INICIO" id="E72F54CB-8524-BBD8-E7DA-17E300C666E1">
+<createdBy>USUARIO</createdBy>
+<createdTime>2020-05-08 17:49:10 UTC</createdTime>
+<ownerDesignName>reto</ownerDesignName>
+<engineerTo>
+<item key="A090F99F-8DDE-5A31-A382-68C7F0915EC6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="FECHA_FIN" id="6665F658-821D-4E34-85E0-2C9659616D7E">
+<createdBy>USUARIO</createdBy>
+<createdTime>2020-05-08 17:49:26 UTC</createdTime>
+<ownerDesignName>reto</ownerDesignName>
+<engineerTo>
+<item key="A090F99F-8DDE-5A31-A382-68C7F0915EC6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ROL" id="62D47980-1E0F-7219-A900-A2870D0A235D">
+<createdBy>USUARIO</createdBy>
+<createdTime>2020-05-09 08:13:33 UTC</createdTime>
+<generatorID>960AB0D9-C71A-F813-FA72-6C9BC8891C67</generatorID>
+<ownerDesignName>reto</ownerDesignName>
+<engineerTo>
+<item key="A090F99F-8DDE-5A31-A382-68C7F0915EC6" value="true"/>
+</engineerTo>
+<referedAttribute>1DD4102D-A82E-7EBE-19D7-EEA29C8D492B</referedAttribute>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="E2BF435B-0429-DED5-B936-9FD709F192ED" name="JUNTAS PK">
+<createdBy>USUARIO</createdBy>
+<createdTime>2020-05-08 17:49:08 UTC</createdTime>
+<ownerDesignName>reto</ownerDesignName>
+<engineerTo>
+<item key="A090F99F-8DDE-5A31-A382-68C7F0915EC6" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>7B85F825-A895-B233-EBA8-9B69ABE214F5</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

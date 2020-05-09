@@ -1,0 +1,24 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="ACTIVIDAD-TIPOACTIVIDAD" directorySegmentName="seg_0" id="CC8512D6-51BA-A1AB-A015-EA7B76D0F6D2">
+<createdBy>USUARIO</createdBy>
+<createdTime>2020-05-08 16:27:42 UTC</createdTime>
+<comment><![CDATA[Un tipo de actividad puede no ser asignada en ninguna actividad.
+Una actividad siempre tiene que tener 1 tipo de actividad]]></comment>
+<ownerDesignName>reto</ownerDesignName>
+<engineerTo>
+<item key="A090F99F-8DDE-5A31-A382-68C7F0915EC6" value="true"/>
+</engineerTo>
+<sourcePk>5F470D1A-E265-2626-5CFC-1B0A467C2D43</sourcePk>
+<targetPk>C556EEB5-7743-CB09-4C48-9B1054BB13D3</targetPk>
+<identifying>false</identifying>
+<nameOnSource>es de</nameOnSource>
+<nameOnTarget>tiene</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>A18252D5-87E9-8911-DEB0-CE536ABE809D</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>BE9FCEFA-0ADA-087E-3989-FF983617CD45</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

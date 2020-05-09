@@ -1,0 +1,51 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="PAGO_SOCIOS" directorySegmentName="seg_0" id="B6789918-6681-34FC-4E73-939FC28C5D7F">
+<createdBy>USUARIO</createdBy>
+<createdTime>2020-05-08 15:42:15 UTC</createdTime>
+<comment><![CDATA[Un socio paga al menos una cuota.
+La misma cuota es pagada por distintos socios. ]]></comment>
+<ownerDesignName>reto</ownerDesignName>
+<engineerTo>
+<item key="A090F99F-8DDE-5A31-A382-68C7F0915EC6" value="true"/>
+</engineerTo>
+<sourcePk>B9191708-B270-94A8-148A-DE35E4C355F6</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>son cobradas</nameOnSource>
+<nameOnTarget>pagan</nameOnTarget>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>47A648B1-AD14-CE2B-7ABA-C4C6A9922AA2</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>4145619F-8F7E-B81A-C642-253544C4D33B</targetEntity>
+<transferable>true</transferable>
+<deleteRule>CASCADE</deleteRule>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<attribute name="FECHA_PAGO" id="332F55B8-1B54-BD3A-7388-6A03005C2E3A">
+<createdBy>USUARIO</createdBy>
+<createdTime>2020-05-08 15:42:42 UTC</createdTime>
+<ownerDesignName>reto</ownerDesignName>
+<engineerTo>
+<item key="A090F99F-8DDE-5A31-A382-68C7F0915EC6" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</attribute>
+<attribute name="PAGADO" id="5AD7AA52-C09D-849F-D57D-9A3747B43577">
+<createdBy>USUARIO</createdBy>
+<createdTime>2020-05-08 15:42:59 UTC</createdTime>
+<ownerDesignName>reto</ownerDesignName>
+<engineerTo>
+<item key="A090F99F-8DDE-5A31-A382-68C7F0915EC6" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</attribute>
+</attributes>
+</Relation>

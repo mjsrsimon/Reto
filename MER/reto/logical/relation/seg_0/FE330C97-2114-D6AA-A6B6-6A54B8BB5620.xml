@@ -1,0 +1,24 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="RESPONSABLE" directorySegmentName="seg_0" id="FE330C97-2114-D6AA-A6B6-6A54B8BB5620">
+<createdBy>USUARIO</createdBy>
+<createdTime>2020-05-08 17:43:12 UTC</createdTime>
+<comment><![CDATA[1 socio puede ser o no el responsable de 0 o varios socios menores.
+1 menor solo puede tener un responsable. ]]></comment>
+<ownerDesignName>reto</ownerDesignName>
+<engineerTo>
+<item key="A090F99F-8DDE-5A31-A382-68C7F0915EC6" value="true"/>
+</engineerTo>
+<sourcePk>D9B6DA33-039B-A559-3CA1-5BFAE40B8BD0</sourcePk>
+<targetPk>D9B6DA33-039B-A559-3CA1-5BFAE40B8BD0</targetPk>
+<identifying>false</identifying>
+<nameOnSource>es responsable</nameOnSource>
+<nameOnTarget>tiene como responsable</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>4145619F-8F7E-B81A-C642-253544C4D33B</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>4145619F-8F7E-B81A-C642-253544C4D33B</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

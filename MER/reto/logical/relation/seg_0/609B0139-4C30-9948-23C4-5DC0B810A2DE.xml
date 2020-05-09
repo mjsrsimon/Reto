@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="ASISTEN" directorySegmentName="seg_0" id="609B0139-4C30-9948-23C4-5DC0B810A2DE">
+<createdBy>USUARIO</createdBy>
+<createdTime>2020-05-08 18:03:36 UTC</createdTime>
+<ownerDesignName>reto</ownerDesignName>
+<engineerTo>
+<item key="A090F99F-8DDE-5A31-A382-68C7F0915EC6" value="true"/>
+</engineerTo>
+<sourcePk>D9B6DA33-039B-A559-3CA1-5BFAE40B8BD0</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>participa</nameOnSource>
+<nameOnTarget>asisten</nameOnTarget>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>4145619F-8F7E-B81A-C642-253544C4D33B</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>A18252D5-87E9-8911-DEB0-CE536ABE809D</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

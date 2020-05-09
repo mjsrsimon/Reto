@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="ACTIVIDAD-JUNTA" directorySegmentName="seg_0" id="CFCAD209-20EF-ACE1-2BB8-6211E549E656">
+<createdBy>USUARIO</createdBy>
+<createdTime>2020-05-08 18:13:13 UTC</createdTime>
+<ownerDesignName>reto</ownerDesignName>
+<engineerTo>
+<item key="A090F99F-8DDE-5A31-A382-68C7F0915EC6" value="true"/>
+</engineerTo>
+<sourcePk>E2BF435B-0429-DED5-B936-9FD709F192ED</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>deciden</nameOnSource>
+<nameOnTarget>es decidida</nameOnTarget>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>8F682054-6EB1-0FF0-3000-DF74AE8CF6DB</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>A18252D5-87E9-8911-DEB0-CE536ABE809D</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

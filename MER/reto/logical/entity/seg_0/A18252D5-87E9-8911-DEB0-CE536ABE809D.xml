@@ -1,0 +1,150 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="A18252D5-87E9-8911-DEB0-CE536ABE809D" name="ACTIVIDADES">
+<createdBy>USUARIO</createdBy>
+<createdTime>2020-05-08 15:23:35 UTC</createdTime>
+<ownerDesignName>reto</ownerDesignName>
+<engineerTo>
+<item key="A090F99F-8DDE-5A31-A382-68C7F0915EC6" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_ACTIVIDAD" id="0122DF84-6A04-EC0D-78EA-79E78E0E0CB4">
+<createdBy>USUARIO</createdBy>
+<createdTime>2020-05-08 16:05:55 UTC</createdTime>
+<ownerDesignName>reto</ownerDesignName>
+<engineerTo>
+<item key="A090F99F-8DDE-5A31-A382-68C7F0915EC6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT032</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="PRECIO" id="6C5DC0CA-A88F-DDA4-971D-51710286E635">
+<createdBy>USUARIO</createdBy>
+<createdTime>2020-05-08 17:32:13 UTC</createdTime>
+<ownerDesignName>reto</ownerDesignName>
+<engineerTo>
+<item key="A090F99F-8DDE-5A31-A382-68C7F0915EC6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="FECHA" id="03200058-624C-8B62-1AF6-FCDD6E688290">
+<createdBy>USUARIO</createdBy>
+<createdTime>2020-05-08 17:34:42 UTC</createdTime>
+<ownerDesignName>reto</ownerDesignName>
+<engineerTo>
+<item key="A090F99F-8DDE-5A31-A382-68C7F0915EC6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="DESCRIPCION" id="84969704-E0C6-DA6A-2856-3AE343179C94">
+<createdBy>USUARIO</createdBy>
+<createdTime>2020-05-08 17:35:02 UTC</createdTime>
+<ownerDesignName>reto</ownerDesignName>
+<engineerTo>
+<item key="A090F99F-8DDE-5A31-A382-68C7F0915EC6" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT036</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_SOCIO" directorySegmentName="seg_0" id="7A31337A-F2FF-18AF-5CE2-CC700934796E">
+<createdBy>USUARIO</createdBy>
+<createdTime>2020-05-08 17:32:52 UTC</createdTime>
+<generatorID>08E58D6B-4CEA-04D3-BFFB-527AFFC122A0</generatorID>
+<ownerDesignName>reto</ownerDesignName>
+<engineerTo>
+<item key="A090F99F-8DDE-5A31-A382-68C7F0915EC6" value="true"/>
+</engineerTo>
+<referedAttribute>7AFC1260-41BA-62FC-9DBE-A9D32FF228B5</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_TIPO_ACTIVIDAD" directorySegmentName="seg_0" id="D7E242E1-9FAF-15B7-8575-FA831822EB14">
+<createdBy>USUARIO</createdBy>
+<createdTime>2020-05-08 17:34:09 UTC</createdTime>
+<generatorID>CC8512D6-51BA-A1AB-A015-EA7B76D0F6D2</generatorID>
+<ownerDesignName>reto</ownerDesignName>
+<engineerTo>
+<item key="A090F99F-8DDE-5A31-A382-68C7F0915EC6" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>F8C09961-91C6-84A3-32AA-9D9EF02E8197</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="SUSPENDIDA" id="278E64E0-6FE5-48F1-24FC-B1AEA08E456A">
+<createdBy>USUARIO</createdBy>
+<createdTime>2020-05-08 17:35:51 UTC</createdTime>
+<ownerDesignName>reto</ownerDesignName>
+<engineerTo>
+<item key="A090F99F-8DDE-5A31-A382-68C7F0915EC6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="MOTIVO_SUSPENSION" id="221B82D6-ABDE-DF18-3676-E259C4E84FB6">
+<createdBy>USUARIO</createdBy>
+<createdTime>2020-05-08 17:36:17 UTC</createdTime>
+<ownerDesignName>reto</ownerDesignName>
+<engineerTo>
+<item key="A090F99F-8DDE-5A31-A382-68C7F0915EC6" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="DIFICULTAD" id="F3D0D6D8-AF9D-D7EE-CBCB-A3C41F0963D1">
+<createdBy>USUARIO</createdBy>
+<createdTime>2020-05-09 08:36:44 UTC</createdTime>
+<ownerDesignName>reto</ownerDesignName>
+<engineerTo>
+<item key="A090F99F-8DDE-5A31-A382-68C7F0915EC6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<ownDataTypeParameters>5,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="5F470D1A-E265-2626-5CFC-1B0A467C2D43" name="ACTIVIDADES PK">
+<createdBy>USUARIO</createdBy>
+<createdTime>2020-05-08 16:06:10 UTC</createdTime>
+<ownerDesignName>reto</ownerDesignName>
+<engineerTo>
+<item key="A090F99F-8DDE-5A31-A382-68C7F0915EC6" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>0122DF84-6A04-EC0D-78EA-79E78E0E0CB4</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
