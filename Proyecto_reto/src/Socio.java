@@ -50,4 +50,24 @@ public class Socio {
     public Perfil getPerfil() {
         return perfil;
     }
+
+    public int getId_Socio() {
+        return id_Socio;
+    }
+
+    public String getFechaNacimiento() {
+        return fechaNacimiento;
+    }
+
+    public String getFechaAltaClub() {
+        return fechaAltaClub;
+    }
+
+    public String getFechaBajaClub() {
+        return fechaBajaClub;
+    }
+
+    public int getRepresentante() {
+        return representante;
+    }
 }

@@ -1,3 +1,9 @@
+/**
+ * @author: Mª Jose Simón.
+ * @version: 1.0
+ *
+ *
+ */
 
 import javax.swing.*;
 import java.sql.*;
@@ -19,7 +25,7 @@ public class Main {
         /*CONSULTA SIMPLE PARA CARGAR LOS SOCIOS EN NUESTRO LISTADO*/
         JFrame frame = new JFrame("Comienza...");
         cargarSocios(socios);
-        Login l = new Login(socios);
+        Login l = new Login(socios, conexion);
         frame.setContentPane(l.getpLogin(socios));
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
