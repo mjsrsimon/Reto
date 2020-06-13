@@ -4,7 +4,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.CallableStatement;
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.SQLException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 
 public class DatosSocio {
     private JLabel txtID;
@@ -136,11 +139,16 @@ para guardar los datos.*/
         } else if (String.valueOf(socio.getPerfil()).equals("ADMINISTRADOR")) {
 
             try {
-                // Creamos el statement para añadir los ingredientes.
+                // Creamos el statement para actualizar datos del administrador.
                 String sqlActualizaAdmin = "{ call actualizaciones.actualizaAdministrador(?,?,?,?,?,?,?,?,?) }";
 
                 //crear la conexion
                 CallableStatement csAdmin = conexion.prepareCall(sqlActualizaAdmin);
+
+
+                Date fNac = (Date) new SimpleDateFormat("yyyy-mm-dd hh:mm:ss").parse(socio.getFechaNacimiento());
+                Date fAlta = (Date) new SimpleDateFormat("dd/MM/yy").parse(socio.getFechaAltaClub());
+                Date fBaja = (Date) new SimpleDateFormat("dd/MM/yy").parse(socio.getFechaBajaClub());
 
                 //pasamos datos
                 csAdmin.setInt(1, socio.getId_Socio());
@@ -148,15 +156,17 @@ para guardar los datos.*/
                 csAdmin.setString(3, socio.getTelf());
                 csAdmin.setString(4, socio.getNombre());
                 csAdmin.setString(5, socio.getApellidos());
-                csAdmin.setString(6, socio.getFechaNacimiento());
+                csAdmin.setDate(6, fNac);
                 csAdmin.setString(7, socio.getDNI());
-                csAdmin.setString(8, socio.getFechaAltaClub());
-                csAdmin.setString(9, socio.getFechaBajaClub());
+                csAdmin.setDate(8, fAlta);
+                csAdmin.setDate(9, fBaja);
 
                 //ejecutamos
                 csAdmin.execute();
                 csAdmin.close();
-            } catch (SQLException ex) {
+
+                System.out.println("se ha actualizado correctamente. ");
+            } catch (SQLException | ParseException ex) {
                 JOptionPane.showMessageDialog(null, "No se ha podido actualizar el administrador", "Error.", JOptionPane.ERROR_MESSAGE);
             }
 
