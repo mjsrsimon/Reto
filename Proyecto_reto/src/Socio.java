@@ -12,6 +12,9 @@ public class Socio {
     private Perfil perfil;
     private int  representante;
 
+    public Socio() {
+    }
+
     public Socio(int id_Socio, String nombre, String apellidos, String fechaNacimiento, String DNI, String telf, String email,
                  String fechaAltaClub, String fechaBajaClub, Perfil perfil, int representante) {
         this.id_Socio = id_Socio;

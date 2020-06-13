@@ -103,29 +103,7 @@ public class Main {
 
     }
 
-    /*
-        public static void cargarRecetas(List<Receta> recetas) {
 
-            try {
-
-                Statement stmt = conexion.createStatement();
-
-                ResultSet rRecetas = stmt.executeQuery("SELECT Receta.TITULO froM RECETA");
-
-                while (rRecetas.next()) {
-                    recetas.add(new Receta(rRecetas.getString(1)));
-                }
-
-                stmt.close();
-
-            } catch (SQLException e) {
-                System.out.println("No se ha podido cargar las recetas en el main");
-            }
-
-
-        }
-
-    */
     public static void desconectarBD() {
 
         try {

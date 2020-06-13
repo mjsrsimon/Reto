@@ -22,31 +22,39 @@ public class Login {
             @Override
             public void actionPerformed(ActionEvent e) {
 
+
                 for (Socio s : socios) {
-                    if (txtUser.getText().equals(s.getDNI())) {
-                        if (s.getPerfil().equals(Perfil.valueOf("ADMINISTRADOR"))) {
-                            String repre = Representante(s, conexion);
-                            JFrame frame = new JFrame("Calendario administrador...");
-                            CalendarioAdministrador ca = new CalendarioAdministrador(socios, s, repre, conexion);
-                            frame.setContentPane(ca.getpCalendarioAdmin(socios, s,repre, conexion));
-                            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                            frame.pack();
-                            frame.setVisible(true);
-                            //hago un break para que no continue el foreach ya que ha encontrado al socio.
-                            break;
-                        } else if (s.getPerfil().equals(Perfil.valueOf("USUARIO"))) {
-                            String repre = Representante(s, conexion);
-                            JFrame frame = new JFrame("Calendario Usuario...");
-                            CalendarioUsuario c = new CalendarioUsuario(s, repre, socios, conexion);
-                            frame.setContentPane(c.getpCalendarioUser(s, repre, socios, conexion));
-                            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                            frame.pack();
-                            frame.setVisible(true);
-                            //hago un break para que no continue el foreach ya que ha encontrado al socio.
-                            break;
+
+                        if (txtUser.getText().equals(s.getDNI())) {
+                            if (s.getPerfil().equals(Perfil.valueOf("ADMINISTRADOR"))) {
+                                String repre = Representante(s, conexion);
+                                JFrame frame = new JFrame("Calendario administrador...");
+                                CalendarioAdministrador ca = new CalendarioAdministrador(socios, s, repre, conexion);
+                                frame.setContentPane(ca.getpCalendarioAdmin(socios, s, repre, conexion));
+                                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                                frame.pack();
+                                frame.setVisible(true);
+                                //hago un break para que no continue el foreach ya que ha encontrado al socio.
+
+                                break;
+                            } else if (s.getPerfil().equals(Perfil.valueOf("USUARIO"))) {
+                                String repre = Representante(s, conexion);
+                                JFrame frame = new JFrame("Calendario Usuario...");
+                                CalendarioUsuario c = new CalendarioUsuario(s, repre, socios, conexion);
+                                frame.setContentPane(c.getpCalendarioUser(s, repre, socios, conexion));
+                                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                                frame.pack();
+                                frame.setVisible(true);
+                                //hago un break para que no continue el foreach ya que ha encontrado al socio.
+
+                                break;
+                            } else {
+                                JOptionPane.showMessageDialog(null, "Erro. Mal DNI", "KO", JOptionPane.ERROR_MESSAGE);
+
+                            }
+
                         }
 
-                    }
                 }
 
 
