@@ -70,4 +70,56 @@ public class Socio {
     public int getRepresentante() {
         return representante;
     }
+
+    public void setId_Socio(int id_Socio) {
+        this.id_Socio = id_Socio;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setApellidos(String apellidos) {
+        this.apellidos = apellidos;
+    }
+
+    public void setFechaNacimiento(String fechaNacimiento) {
+        this.fechaNacimiento = fechaNacimiento;
+    }
+
+    public void setDNI(String DNI) {
+        this.DNI = DNI;
+    }
+
+    public void setTelf(String telf) {
+        this.telf = telf;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setFechaAltaClub(String fechaAltaClub) {
+        this.fechaAltaClub = fechaAltaClub;
+    }
+
+    public void setFechaBajaClub(String fechaBajaClub) {
+        this.fechaBajaClub = fechaBajaClub;
+    }
+
+    public void setPerfil(Perfil perfil) {
+        this.perfil = perfil;
+    }
+
+    public void setRepresentante(int representante) {
+        this.representante = representante;
+    }
+
+    @Override
+    public String toString() {
+        return nombre + " " + apellidos;
+
+    }
+
+
 }

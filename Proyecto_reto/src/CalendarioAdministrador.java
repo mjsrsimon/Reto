@@ -1,21 +1,26 @@
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.Connection;
 import java.util.List;
 
 public class CalendarioAdministrador {
     private JPanel pCalendarioAdmin;
     private JButton bMiPerfil;
-    private JLabel LSocios;
-    private JComboBox cbSocios;
     private JButton bCuota;
     private JButton bActividad;
+    private JButton bSocios;
 
-    public CalendarioAdministrador(List<Socio>socios, Socio socio) {
+    public CalendarioAdministrador(List<Socio>socios, Socio socio, String representante, Connection conexion) {
         bMiPerfil.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                JFrame frame = new JFrame("Mis datos son...");
+                DatosSocio d = new DatosSocio(socio, representante, conexion, frame);
+                frame.setContentPane(d.getJPDatosSocio(socio, representante, conexion));
+                frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+                frame.pack();
+                frame.setVisible(true);
 
             }
         });
@@ -33,7 +38,7 @@ public class CalendarioAdministrador {
         });
     }
 
-    public JPanel getpCalendarioAdmin(List<Socio>socios, Socio socio) {
+    public JPanel getpCalendarioAdmin(List<Socio>socios, Socio socio, String representante, Connection conexion) {
         return pCalendarioAdmin;
     }
 

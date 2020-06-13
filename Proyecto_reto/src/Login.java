@@ -25,9 +25,10 @@ public class Login {
                 for (Socio s : socios) {
                     if (txtUser.getText().equals(s.getDNI())) {
                         if (s.getPerfil().equals(Perfil.valueOf("ADMINISTRADOR"))) {
+                            String repre = Representante(s, conexion);
                             JFrame frame = new JFrame("Calendario administrador...");
-                            CalendarioAdministrador ca = new CalendarioAdministrador(socios, s);
-                            frame.setContentPane(ca.getpCalendarioAdmin(socios, s));
+                            CalendarioAdministrador ca = new CalendarioAdministrador(socios, s, repre, conexion);
+                            frame.setContentPane(ca.getpCalendarioAdmin(socios, s,repre, conexion));
                             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                             frame.pack();
                             frame.setVisible(true);
@@ -36,8 +37,8 @@ public class Login {
                         } else if (s.getPerfil().equals(Perfil.valueOf("USUARIO"))) {
                             String repre = Representante(s, conexion);
                             JFrame frame = new JFrame("Calendario Usuario...");
-                            CalendarioUsuario c = new CalendarioUsuario(s, repre);
-                            frame.setContentPane(c.getpCalendarioUser(s, repre));
+                            CalendarioUsuario c = new CalendarioUsuario(s, repre, socios, conexion);
+                            frame.setContentPane(c.getpCalendarioUser(s, repre, socios, conexion));
                             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                             frame.pack();
                             frame.setVisible(true);
@@ -68,29 +69,30 @@ public class Login {
 
         try {
 
-            int repr = s.getRepresentante();
+            if(s.getRepresentante()>0) {
+                int repr = s.getRepresentante();
 
-            // Creamos el statement
-            String sql = "{ call consultas.consultaRepresentante(?, ?, ?) }";
-            CallableStatement cs = conexion.prepareCall(sql);
+                // Creamos el statement
+                String sql = "{ call consultas.consultaRepresentante(?, ?, ?) }";
+                CallableStatement cs = conexion.prepareCall(sql);
 
-            // Cargamos los parametros de entrada IN que el codigo del representante.
-            cs.setInt(1, repr);
+                // Cargamos los parametros de entrada IN que el codigo del representante.
+                cs.setInt(1, repr);
 
-            // Cargamos los parametros de entrada OUT que son el nombre y el apellido.
+                // Cargamos los parametros de entrada OUT que son el nombre y el apellido.
 
-            cs.registerOutParameter(2, Types.VARCHAR);
-            cs.registerOutParameter(3, Types.VARCHAR);
+                cs.registerOutParameter(2, Types.VARCHAR);
+                cs.registerOutParameter(3, Types.VARCHAR);
 
-            // Ejecutamos la llamada
-            cs.execute();
+                // Ejecutamos la llamada
+                cs.execute();
 
-            String nombreRepresentante = cs.getString(2);
+                String nombreRepresentante = cs.getString(2);
 
-            String apellidosRepresentante = cs.getString(3);
+                String apellidosRepresentante = cs.getString(3);
 
-            RepresentanteDatos = nombreRepresentante.concat(" " + apellidosRepresentante);
-
+                RepresentanteDatos = nombreRepresentante.concat(" " + apellidosRepresentante);
+            }
 
         } catch (SQLException e) {
             System.out.println("Error no se ha ejecutado el procedimiento.");
