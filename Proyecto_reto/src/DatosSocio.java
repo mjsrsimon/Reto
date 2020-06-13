@@ -148,7 +148,7 @@ para guardar los datos.*/
                 csAdmin.setString(3, socio.getTelf());
                 csAdmin.setString(4, socio.getNombre());
                 csAdmin.setString(5, socio.getApellidos());
-                csAdmin.setString(6, socio.getFechaNacimiento().);
+                csAdmin.setString(6, socio.getFechaNacimiento());
                 csAdmin.setString(7, socio.getDNI());
                 csAdmin.setString(8, socio.getFechaAltaClub());
                 csAdmin.setString(9, socio.getFechaBajaClub());
