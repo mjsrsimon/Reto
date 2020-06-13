@@ -147,7 +147,7 @@ para guardar los datos.*/
 
 
                 Date fNac = (Date) new SimpleDateFormat("yyyy-mm-dd hh:mm:ss").parse(socio.getFechaNacimiento());
-                Date fAlta = (Date) new SimpleDateFormat("dd/MM/yy").parse(socio.getFechaAltaClub());
+                Date fAlta = (Date) new SimpleDateFormat("dd/mm/yy").parse(socio.getFechaAltaClub());
                 Date fBaja = (Date) new SimpleDateFormat("dd/MM/yy").parse(socio.getFechaBajaClub());
 
                 //pasamos datos
