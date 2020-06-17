@@ -4,7 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.CallableStatement;
 import java.sql.Connection;
-import java.sql.Date;
+
 import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -145,10 +145,23 @@ para guardar los datos.*/
                 //crear la conexion
                 CallableStatement csAdmin = conexion.prepareCall(sqlActualizaAdmin);
 
+    //Covertir string en fecha para java y este en sql.
 
-                Date fNac = (Date) new SimpleDateFormat("yyyy-mm-dd hh:mm:ss").parse(socio.getFechaNacimiento());
-                Date fAlta = (Date) new SimpleDateFormat("dd/mm/yy").parse(socio.getFechaAltaClub());
-                Date fBaja = (Date) new SimpleDateFormat("dd/MM/yy").parse(socio.getFechaBajaClub());
+                SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+                java.util.Date fNacimiento = null;
+                fNacimiento = formato.parse(socio.getFechaNacimiento());
+                java.sql.Date fNac = new java.sql.Date(fNacimiento.getTime());
+
+
+                java.util.Date fAltaClub = null;
+                fAltaClub = formato.parse(socio.getFechaAltaClub());
+                java.sql.Date fAlta = new java.sql.Date(fAltaClub.getTime());
+
+
+                java.util.Date fBajaClub = null;
+                fBajaClub = formato.parse(socio.getFechaNacimiento());
+                java.sql.Date fBaja = new java.sql.Date(fBajaClub.getTime());
+
 
                 //pasamos datos
                 csAdmin.setInt(1, socio.getId_Socio());

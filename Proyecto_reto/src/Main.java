@@ -1,12 +1,11 @@
 /**
  * @author: Mª Jose Simón.
  * @version: 1.0
- *
- *
  */
 
 import javax.swing.*;
 import java.sql.*;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -79,17 +78,29 @@ public class Main {
             Statement stmt = conexion.createStatement();
 
             ResultSet rSocio = stmt.executeQuery("select * from socio");
+
+            // https://www.it-swarm.dev/es/java/como-formateo-una-fecha-java.sql.date-en-este-formato-mm-dd-aaaa/1046923634/
+            //formatting date in Java using SimpleDateFormat
+            SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("dd/MM/yyyy");
+
             while (rSocio.next()) {
+                String alta = "";
+                Date fbaja = rSocio.getDate(9);
+                String baja = null;
+
+                if (fbaja != null) {
+                    baja = DATE_FORMAT.format(fbaja);
+                }
 
                 socios.add(new Socio(rSocio.getInt(1),
                         rSocio.getString(2),
                         rSocio.getString(3),
-                        rSocio.getString(4),
+                        DATE_FORMAT.format(rSocio.getDate(4)),
                         rSocio.getString(5),
                         rSocio.getString(6),
                         rSocio.getString(7),
-                        rSocio.getString(8),
-                        rSocio.getString(9),
+                        DATE_FORMAT.format(rSocio.getDate(8)),
+                        baja,
                         Perfil.valueOf(rSocio.getString(10)),
                         rSocio.getInt(11)));
             }
