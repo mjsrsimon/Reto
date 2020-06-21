@@ -148,6 +148,7 @@ para guardar los datos.*/
     //Covertir string en fecha para java y este en sql.
 
                 SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+
                 java.util.Date fNacimiento = null;
                 fNacimiento = formato.parse(socio.getFechaNacimiento());
                 java.sql.Date fNac = new java.sql.Date(fNacimiento.getTime());

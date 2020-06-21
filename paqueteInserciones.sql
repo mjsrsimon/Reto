@@ -7,9 +7,17 @@ precio_menor_new in cuota.precio_menor%type,
 anyo_new in cuota.anyo%type
 );
 
+procedure addNewCuotaSocio (
+codSocio in socio.id_socio%type,
+codCuota in cuota.id_cuota%type,
+fecha in cuotapagada.fecha%type,
+pagada in cuotapagada.pagado%type
+
+);
 
 
-end; 
+
+end;
 
 create or replace package body inserciones is
 procedure nuevaCuota (
@@ -30,4 +38,25 @@ select max(id_cuota) into codCuota from cuota;
 
 
 end; 
+
+
+
+procedure addNewCuotaSocio (
+codSocio in socio.id_socio%type,
+codCuota in cuota.id_cuota%type,
+fecha in cuotapagada.fecha%type,
+pagada in cuotapagada.pagado%type
+) is
+begin
+
+insert into cuotapagada values (codSocio, codCuota, fecha, pagada);
+End; 
+
+
 end; 
+
+
+begin
+inserciones.addNewCuotaSocio(41, 71, '01/01/2020', 'No');
+
+end;

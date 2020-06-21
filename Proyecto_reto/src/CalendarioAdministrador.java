@@ -18,6 +18,7 @@ public class CalendarioAdministrador {
     private JButton bSocios;
 
     public CalendarioAdministrador(List<Socio> socios, Socio socio, String representante, Connection conexion) {
+        cargarCuotas(cuotas, cuotasPagadas, conexion, socios);
         bMiPerfil.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -34,9 +35,8 @@ public class CalendarioAdministrador {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                cargarCuotas(cuotas, cuotasPagadas, conexion, socios);
                 JFrame frame = new JFrame("CuotasNuevas");
-                CuotasNuevas cn = new CuotasNuevas(cuotas, cuotasPagadas, conexion, socios);
+                CuotasNuevas cn = new CuotasNuevas(cuotas, cuotasPagadas, conexion, socios, frame);
                 frame.setContentPane(cn.getpCuotasNuevas(cuotas, cuotasPagadas, conexion, socios));
                 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 frame.pack();
@@ -47,6 +47,22 @@ public class CalendarioAdministrador {
         bActividad.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+        bSocios.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                /* aqui tiene que poder ver todo lo referente al socio:
+                   - modificar datos de los socios.
+                   - modificar datos de las cuotas de los socios si pagan o no la cuota*/
+                JFrame frame = new JFrame("TablaSocios");
+                TablaSocios ts =new TablaSocios(frame, socios, conexion, cuotasPagadas);
+                frame.setContentPane(ts.getPanelSocios(frame, socios, conexion, cuotasPagadas));
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame.pack();
+                frame.setVisible(true);
+
 
             }
         });

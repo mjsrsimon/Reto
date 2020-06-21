@@ -33,7 +33,7 @@
           <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="1" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Año"/>
+          <text value="Año (dd/mm/yyyy)"/>
         </properties>
       </component>
       <component id="9b71e" class="javax.swing.JTextField" binding="textPAdulto">
@@ -74,6 +74,20 @@
           <foreground color="-15591749"/>
           <hideActionText value="true"/>
           <text value="GUARDAR"/>
+        </properties>
+      </component>
+      <component id="d425e" class="javax.swing.JButton" binding="bVolver">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="2" use-parent-layout="false">
+            <preferred-size width="150" height="25"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-3421237"/>
+          <font name="Courier New" size="14" style="1"/>
+          <foreground color="-15591749"/>
+          <hideActionText value="true"/>
+          <text value="VOLVER"/>
         </properties>
       </component>
     </children>

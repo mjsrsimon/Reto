@@ -1,6 +1,7 @@
 /**
  * @author: Mª Jose Simón.
  * @version: 1.0
+ * @see <a href="https://www.it-swarm.dev/es/java/como-formateo-una-fecha-java.sql.date-en-este-formato-mm-dd-aaaa/1046923634/">formato fechas</a>.
  */
 
 import javax.swing.*;
@@ -30,21 +31,6 @@ public class Main {
         frame.pack();
         frame.setVisible(true);
 
-        /*CONSULTA SIMPLE PARA CARGAR LAS RECETAS EN NUESTRO LISTADO*/
-/*
-        JFrame frame = new JFrame("vPrincipal");
-        cargarRecetas(recetas);
-        vPrincipal p = new vPrincipal(recetas, ingredientes, recetaIngredientes, conexion);
-
-        frame.setContentPane(p.getPanelPpal());
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.pack();
-        frame.setVisible(true);
-
-        // desconectarBD();
-        // -- no la utilizamos ya que desconectamos de la base de datos cuando hacermos conexiones para ejecutar procedimientos
-
- */
 
     }
 
