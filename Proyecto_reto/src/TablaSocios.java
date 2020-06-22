@@ -55,7 +55,6 @@ public class TablaSocios {
         LSocios.setModel(modelo);
         // Cuando se pulsa en un socio, mostrar datos de socio seleccionado
 
-
         //Mostrar datos en los campos.
 
         LSocios.addListSelectionListener(e -> {
@@ -83,22 +82,50 @@ public class TablaSocios {
                 tCuotas.setViewportView(tabla);
                 tabla.setModel(new TablaCuotasImpagadas(seleccionado.getId_Socio(), cuotasPagadas));
 
+
+
             }
 
-            seleccionado.setTelf(textTelf.getText());
-            seleccionado.setEmail(textEmail.getText());
-            seleccionado.setNombre(textNombre.getText());
-            seleccionado.setApellidos(textApellido.getText());
-            seleccionado.setDNI(textDNI.getText());
-            seleccionado.setFechaNacimiento(textFNacim.getText());
-            seleccionado.setFechaAltaClub(textFAltaC.getText());
-            seleccionado.setFechaBajaClub(textFBajaC.getText());
-            seleccionado.setPerfil(Perfil.valueOf(textPerfil.getText()));
 
 
             bGuardar.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
+
+
+                    if(!(textFAltaC.getText().equals(seleccionado.getFechaAltaClub()))){
+                        seleccionado.setFechaAltaClub(textFAltaC.getText());
+                    }
+                    if(!(textFBajaC.getText().equals(seleccionado.getFechaBajaClub()))){
+                        seleccionado.setFechaBajaClub(textFBajaC.getText());
+                    }
+                    if(!(Perfil.valueOf(textPerfil.getText()).equals(seleccionado.getPerfil().toString()))){
+                        seleccionado.setPerfil(Perfil.valueOf(textPerfil.getText()));
+                    }
+
+                    if(!(textApellido.getText().equals(seleccionado.getApellidos()))){
+                        seleccionado.setApellidos(textApellido.getText());
+                    }
+
+                    if(!(textNombre.getText().equals(seleccionado.getNombre()))){
+                        seleccionado.setNombre(textNombre.getText());
+                    }
+
+                    if(!(textEmail.getText().equals(seleccionado.getEmail()))){
+                        seleccionado.setEmail(textEmail.getText());
+                    }
+
+                    if(!(textTelf.getText().equals(seleccionado.getTelf()))){
+                        seleccionado.setTelf(textTelf.getText());
+                    }
+
+                    if(!(textDNI.getText().equals(seleccionado.getDNI()))){
+                        seleccionado.setDNI(textDNI.getText());
+                    }
+
+                    if(!(textFNacim.getText().equals(seleccionado.getFechaNacimiento()))){
+                        seleccionado.setFechaNacimiento(textFNacim.getText());
+                    }
                     try {
                         // Creamos el statement para actualizar datos del administrador.
                         String sqlActualizaAdminSocio = "{ call actualizaciones.actualizaAdministradorSocio(?,?,?,?,?,?,?,?,?) }";
